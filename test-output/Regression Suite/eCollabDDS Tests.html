@@ -1,0 +1,921 @@
+<html>
+<head>
+<title>TestNG:  eCollabDDS Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>eCollabDDS Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/13/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Oct 06 09:52:53 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>105 seconds (105925 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.AddEndUserHos_Neg_Tests()'><b>AddEndUserHos_Neg_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br>Parameters: zz, zz, zz, zzzzzz<br/>
+<a href="#Output-830083467" onClick='toggleBox("Output-830083467", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-830083467" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-830083467">
+Failed: AddEndUserHos_Neg_Tests<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:AddEndUserHos_Neg_Tests, hospital Name_err is incorrect,  expected [Hospital name should have 3-70 characters and  allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos;,and space)] but found [],
+	Failed:AddEndUserHos_Neg_Tests, hospital Address_err is incorrect,  expected [Address should have 3-100 alphanumeric characters and allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos; and space)] but found []
+	at tests.Admin_Hospitals_Pages_Tests.AddEndUserHos_Neg_Tests(Admin_Hospitals_Pages_Tests.java:44)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace830083467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace830083467'><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:AddEndUserHos_Neg_Tests, hospital Name_err is incorrect,  expected [Hospital name should have 3-70 characters and  allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos;,and space)] but found [],
+	Failed:AddEndUserHos_Neg_Tests, hospital Address_err is incorrect,  expected [Address should have 3-100 alphanumeric characters and allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos; and space)] but found []
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at tests.Admin_Hospitals_Pages_Tests.AddEndUserHos_Neg_Tests(Admin_Hospitals_Pages_Tests.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>2</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.AddEndUserHos_Neg_Tests()'><b>AddEndUserHos_Neg_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br>Parameters: HosName,-_, zz_Add1, z_City, 12345<br/>
+<a href="#Output-522082506" onClick='toggleBox("Output-522082506", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-522082506" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-522082506">
+Failed: AddEndUserHos_Neg_Tests<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:AddEndUserHos_Neg_Tests, hospital Name_err is incorrect,  expected [Hospital name should have 3-70 characters and  allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos;,and space)] but found []
+	at tests.Admin_Hospitals_Pages_Tests.AddEndUserHos_Neg_Tests(Admin_Hospitals_Pages_Tests.java:44)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace522082506", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace522082506'><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:AddEndUserHos_Neg_Tests, hospital Name_err is incorrect,  expected [Hospital name should have 3-70 characters and  allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos;,and space)] but found []
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at tests.Admin_Hospitals_Pages_Tests.AddEndUserHos_Neg_Tests(Admin_Hospitals_Pages_Tests.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>2</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.AddReviewerHos_Neg_Tests()'><b>AddReviewerHos_Neg_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br>Parameters: zz, zz, zz, zzzzzz, zz, zz, zz, zzzzzzzzzz<br/>
+<a href="#Output-331216192" onClick='toggleBox("Output-331216192", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-331216192" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-331216192">
+Failed: AddReviewerHos_Neg_Tests<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:AddReviewerHos_Neg_Tests, hospital Name_err is incorrect,  expected [Hospital name should have 3-70 characters and  allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos;,and space)] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Username Error is incorrect.,  expected [Username should be alphanumeric [allowed special characters dot(.), @, underscore(_),dash(-)] and length 3 to 50] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Name Error is incorrect.,  expected [Allows characters, dot and space and length 3 - 70] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Email Error is incorrect.,  expected [Wrong Email] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Mobile Error is incorrect.,  expected [Please enter valid 10 digit mobile] but found []
+	at tests.Admin_Hospitals_Pages_Tests.AddReviewerHos_Neg_Tests(Admin_Hospitals_Pages_Tests.java:70)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace331216192", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace331216192'><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:AddReviewerHos_Neg_Tests, hospital Name_err is incorrect,  expected [Hospital name should have 3-70 characters and  allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos;,and space)] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Username Error is incorrect.,  expected [Username should be alphanumeric [allowed special characters dot(.), @, underscore(_),dash(-)] and length 3 to 50] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Name Error is incorrect.,  expected [Allows characters, dot and space and length 3 - 70] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Email Error is incorrect.,  expected [Wrong Email] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Mobile Error is incorrect.,  expected [Please enter valid 10 digit mobile] but found []
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at tests.Admin_Hospitals_Pages_Tests.AddReviewerHos_Neg_Tests(Admin_Hospitals_Pages_Tests.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>3</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.AddReviewerHos_Neg_Tests()'><b>AddReviewerHos_Neg_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br>Parameters: HosName,-_, zz_Add1, z_City, 12345, User 1, C_A NameA, abc1gmail.com, 123456789<br/>
+<a href="#Output-645896037" onClick='toggleBox("Output-645896037", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-645896037" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-645896037">
+Failed: AddReviewerHos_Neg_Tests<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:AddReviewerHos_Neg_Tests, hospital Name_err is incorrect,  expected [Hospital name should have 3-70 characters and  allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos;,and space)] but found [],
+	Failed:AddReviewerHos_Neg_Tests, hospital Address_err is incorrect,  expected [Address should have 3-100 alphanumeric characters and allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos; and space)] but found [],
+	Failed:AddReviewerHos_Neg_Tests, hospital City_err is incorrect,  expected [City should have 3-50 characters and allowed special characters are (&apos;.&apos; and space)] but found [],
+	Failed:AddReviewerHos_Neg_Tests, hospital Pin_err is incorrect,  expected [Pincode should be 6 digits only] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Username Error is incorrect.,  expected [Username should be alphanumeric [allowed special characters dot(.), @, underscore(_),dash(-)] and length 3 to 50] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Name Error is incorrect.,  expected [Allows characters, dot and space and length 3 - 70] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Email Error is incorrect.,  expected [Wrong Email] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Mobile Error is incorrect.,  expected [Please enter valid 10 digit mobile] but found []
+	at tests.Admin_Hospitals_Pages_Tests.AddReviewerHos_Neg_Tests(Admin_Hospitals_Pages_Tests.java:70)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace645896037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace645896037'><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:AddReviewerHos_Neg_Tests, hospital Name_err is incorrect,  expected [Hospital name should have 3-70 characters and  allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos;,and space)] but found [],
+	Failed:AddReviewerHos_Neg_Tests, hospital Address_err is incorrect,  expected [Address should have 3-100 alphanumeric characters and allowed special characters are (&apos;.&apos;, &apos;,&apos;, &apos;-&apos; and space)] but found [],
+	Failed:AddReviewerHos_Neg_Tests, hospital City_err is incorrect,  expected [City should have 3-50 characters and allowed special characters are (&apos;.&apos; and space)] but found [],
+	Failed:AddReviewerHos_Neg_Tests, hospital Pin_err is incorrect,  expected [Pincode should be 6 digits only] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Username Error is incorrect.,  expected [Username should be alphanumeric [allowed special characters dot(.), @, underscore(_),dash(-)] and length 3 to 50] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Name Error is incorrect.,  expected [Allows characters, dot and space and length 3 - 70] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Email Error is incorrect.,  expected [Wrong Email] but found [],
+	Failed:AddReviewerHos_Neg_Tests, Nodal officer Mobile Error is incorrect.,  expected [Please enter valid 10 digit mobile] but found []
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at tests.Admin_Hospitals_Pages_Tests.AddReviewerHos_Neg_Tests(Admin_Hospitals_Pages_Tests.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>2</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.AddReviewerHos_Tests()'><b>AddReviewerHos_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br>Parameters: HosName RevB, HosAdd B, HosCity B, 123451, centeradmin01, CA NameBB, rev1112@gmail.com, 1234567003<br/>
+<a href="#Output-2021230836" onClick='toggleBox("Output-2021230836", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2021230836" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2021230836">
+Failed: AddReviewerHos_Tests<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (b47fb718e9675fd97aad442d2d54118d)] -&gt; xpath: //*[@id=&apos;hospitalsavemsg&apos;]] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ravik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b47fb718e9675fd97aad442d2d54118d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at eCollabDDSPages.Admin_Hospitals_Pages.ReviewerHos_AddForm_Tests(Admin_Hospitals_Pages.java:573)
+	at tests.Admin_Hospitals_Pages_Tests.AddReviewerHos_Tests(Admin_Hospitals_Pages_Tests.java:78)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2021230836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2021230836'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (b47fb718e9675fd97aad442d2d54118d)] -&gt; xpath: //*[@id=&apos;hospitalsavemsg&apos;]] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ravik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b47fb718e9675fd97aad442d2d54118d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at eCollabDDSPages.Admin_Hospitals_Pages.ReviewerHos_AddForm_Tests(Admin_Hospitals_Pages.java:573)
+	at tests.Admin_Hospitals_Pages_Tests.AddReviewerHos_Tests(Admin_Hospitals_Pages_Tests.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>7</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.Hospitals_AddEndUserHos_NoData_Tests()'><b>Hospitals_AddEndUserHos_NoData_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-291651850" onClick='toggleBox("Output-291651850", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-291651850" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-291651850">
+Failed: Hospitals_AddEndUserHos_NoData_Tests<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	hospitalLevel_error is incorrect. , expected [Required Field] but found []
+	at tests.Admin_Hospitals_Pages_Tests.Hospitals_AddEndUserHos_NoData_Tests(Admin_Hospitals_Pages_Tests.java:35)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace291651850", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace291651850'><pre>java.lang.AssertionError: The following asserts failed:
+	hospitalLevel_error is incorrect. , expected [Required Field] but found []
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at tests.Admin_Hospitals_Pages_Tests.Hospitals_AddEndUserHos_NoData_Tests(Admin_Hospitals_Pages_Tests.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>1</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.Hospitals_AddReviewerHos_NoData_Tests()'><b>Hospitals_AddReviewerHos_NoData_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-1435191618" onClick='toggleBox("Output-1435191618", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1435191618" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1435191618">
+Failed: Hospitals_AddReviewerHos_NoData_Tests<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:Hospitals_AddReviewerHosForm_Tests, Nodal Officer Username Error is incorrect,  expected [Required Field] but found [],
+	Failed:Hospitals_AddReviewerHosForm_Tests, Nodal Officer Name Error is incorrect,  expected [Required Field] but found [],
+	Failed:Hospitals_AddReviewerHosForm_Tests, Nodal Officer Email Error is incorrect,  expected [Required Field] but found [],
+	Failed:Hospitals_AddReviewerHosForm_Tests, Nodal Officer Mobile Error is incorrect,  expected [Required Field] but found []
+	at tests.Admin_Hospitals_Pages_Tests.Hospitals_AddReviewerHos_NoData_Tests(Admin_Hospitals_Pages_Tests.java:61)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1435191618", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1435191618'><pre>java.lang.AssertionError: The following asserts failed:
+	Failed:Hospitals_AddReviewerHosForm_Tests, Nodal Officer Username Error is incorrect,  expected [Required Field] but found [],
+	Failed:Hospitals_AddReviewerHosForm_Tests, Nodal Officer Name Error is incorrect,  expected [Required Field] but found [],
+	Failed:Hospitals_AddReviewerHosForm_Tests, Nodal Officer Email Error is incorrect,  expected [Required Field] but found [],
+	Failed:Hospitals_AddReviewerHosForm_Tests, Nodal Officer Mobile Error is incorrect,  expected [Required Field] but found []
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at tests.Admin_Hospitals_Pages_Tests.Hospitals_AddReviewerHos_NoData_Tests(Admin_Hospitals_Pages_Tests.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>1</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.List_Hospitals_Buttons_Tests()'><b>List_Hospitals_Buttons_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-1383675856" onClick='toggleBox("Output-1383675856", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1383675856" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1383675856">
+Failed: List_Hospitals_Buttons_Tests<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ravik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b47fb718e9675fd97aad442d2d54118d
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at eCollabDDSPages.Admin_Hospitals_Pages.List_Hospitals_HideColumn_Validation(Admin_Hospitals_Pages.java:631)
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_Buttons_Tests(Admin_Hospitals_Pages_Tests.java:95)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1383675856", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1383675856'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ravik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b47fb718e9675fd97aad442d2d54118d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at eCollabDDSPages.Admin_Hospitals_Pages.List_Hospitals_HideColumn_Validation(Admin_Hospitals_Pages.java:631)
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_Buttons_Tests(Admin_Hospitals_Pages_Tests.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>0</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.List_Hospitals_ColumnSorting_Tests()'><b>List_Hospitals_ColumnSorting_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-1221439830" onClick='toggleBox("Output-1221439830", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1221439830" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1221439830">
+Failed: List_Hospitals_ColumnSorting_Tests<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	descending sorting is missing on code column. , expected [thTd sorting_desc] but found [thTd sorting],
+	sorting option is missing on Created On column. , expected [thTd sorting] but found [thTd sorting_desc],
+	Remove Sorting option from Action column. , expected [thTd sorting_disabled] but found [thTd noVis sorting_disabled]
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_ColumnSorting_Tests(Admin_Hospitals_Pages_Tests.java:105)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1221439830", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1221439830'><pre>java.lang.AssertionError: The following asserts failed:
+	descending sorting is missing on code column. , expected [thTd sorting_desc] but found [thTd sorting],
+	sorting option is missing on Created On column. , expected [thTd sorting] but found [thTd sorting_desc],
+	Remove Sorting option from Action column. , expected [thTd sorting_disabled] but found [thTd noVis sorting_disabled]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_ColumnSorting_Tests(Admin_Hospitals_Pages_Tests.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>1</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.List_Hospitals_EnduserHosData_Update_Tests()'><b>List_Hospitals_EnduserHosData_Update_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-1694723725" onClick='toggleBox("Output-1694723725", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1694723725" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1694723725">
+Failed: List_Hospitals_EnduserHosData_Update_Tests<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ravik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b47fb718e9675fd97aad442d2d54118d
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at eCollabDDSPages.Admin_Hospitals_Pages.List_Hospitals_EndUserData_Tests(Admin_Hospitals_Pages.java:829)
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_EnduserHosData_Update_Tests(Admin_Hospitals_Pages_Tests.java:121)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1694723725", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1694723725'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ravik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b47fb718e9675fd97aad442d2d54118d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at eCollabDDSPages.Admin_Hospitals_Pages.List_Hospitals_EndUserData_Tests(Admin_Hospitals_Pages.java:829)
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_EnduserHosData_Update_Tests(Admin_Hospitals_Pages_Tests.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>1</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.List_Hospitals_ReviewerHosData_Update_Tests()'><b>List_Hospitals_ReviewerHosData_Update_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-681088021" onClick='toggleBox("Output-681088021", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-681088021" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-681088021">
+Failed: List_Hospitals_ReviewerHosData_Update_Tests<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: HOS. NAME REVBA
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:283)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)
+	at eCollabDDSPages.Admin_Hospitals_Pages.List_Hospitals_ReviewerData_Tests(Admin_Hospitals_Pages.java:718)
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_ReviewerHosData_Update_Tests(Admin_Hospitals_Pages_Tests.java:112)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace681088021", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace681088021'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: HOS. NAME REVBA
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:283)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)
+	at eCollabDDSPages.Admin_Hospitals_Pages.List_Hospitals_ReviewerData_Tests(Admin_Hospitals_Pages.java:718)
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_ReviewerHosData_Update_Tests(Admin_Hospitals_Pages_Tests.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>2</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.List_Hospitals_Search_Tests()'><b>List_Hospitals_Search_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-1514969303" onClick='toggleBox("Output-1514969303", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1514969303" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1514969303">
+Failed: List_Hospitals_Search_Tests<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@id=&apos;tbodyhospitals&apos;]/tr/td[2]&apos; (tried for 5 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at eCollabDDSPages.Admin_Hospitals_Pages.List_Hospitals_Search_Validations(Admin_Hospitals_Pages.java:960)
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_Search_Tests(Admin_Hospitals_Pages_Tests.java:130)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tbodyhospitals&apos;]/tr/td[2]&quot;}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ravik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b47fb718e9675fd97aad442d2d54118d
+*** Element info: {Using=xpath, value=//*[@id=&apos;tbodyhospitals&apos;]/tr/td[2]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1514969303", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1514969303'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@id=&apos;tbodyhospitals&apos;]/tr/td[2]&apos; (tried for 5 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at eCollabDDSPages.Admin_Hospitals_Pages.List_Hospitals_Search_Validations(Admin_Hospitals_Pages.java:960)
+	at tests.Admin_Hospitals_Pages_Tests.List_Hospitals_Search_Tests(Admin_Hospitals_Pages_Tests.java:130)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tbodyhospitals&apos;]/tr/td[2]&quot;}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MM5QJ97&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ravik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b47fb718e9675fd97aad442d2d54118d
+*** Element info: {Using=xpath, value=//*[@id=&apos;tbodyhospitals&apos;]/tr/td[2]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+</pre></div></td>
+<td>12</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.hospitals_vcard_count_Tests()'><b>hospitals_vcard_count_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-786722925" onClick='toggleBox("Output-786722925", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-786722925" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-786722925">
+Failed: hospitals_vcard_count_Tests<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Showing list record count does not match with Hospitals vcard count  expected [true] but found [false]
+	at tests.Admin_Hospitals_Pages_Tests.hospitals_vcard_count_Tests(Admin_Hospitals_Pages_Tests.java:87)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace786722925", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace786722925'><pre>java.lang.AssertionError: The following asserts failed:
+	Showing list record count does not match with Hospitals vcard count  expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at tests.Admin_Hospitals_Pages_Tests.hospitals_vcard_count_Tests(Admin_Hospitals_Pages_Tests.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>0</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.AddEndUserHos_Tests()'><b>AddEndUserHos_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br>Parameters: Hos. Name cbh, Hos.Add,- Ah, Hos.City Ah, 123465<br/>
+<a href="#Output-445350376" onClick='toggleBox("Output-445350376", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-445350376" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-445350376">
+Passed: AddEndUserHos_Tests<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.Hospitals_Open_Add_Form_Tests()'><b>Hospitals_Open_Add_Form_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-318794136" onClick='toggleBox("Output-318794136", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-318794136" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-318794136">
+Passed: Hospitals_Open_Add_Form_Tests<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Hospitals_Pages_Tests.Open_Hospitals_Tests()'><b>Open_Hospitals_Tests</b><br>Test class: tests.Admin_Hospitals_Pages_Tests<br/>
+<a href="#Output-2032647583" onClick='toggleBox("Output-2032647583", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2032647583" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2032647583">
+Passed: Open_Hospitals_Tests<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>tests.Admin_Hospitals_Pages_Tests@7a3d45bd</td></tr>
+<tr>
+<td title='tests.Admin_Login_Tests.login_eCollabDDS_Admin_Test()'><b>login_eCollabDDS_Admin_Test</b><br>Test class: tests.Admin_Login_Tests<br/>
+<a href="#Output-1339345635" onClick='toggleBox("Output-1339345635", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1339345635" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1339345635">
+Passed: login_eCollabDDS_Admin_Test<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>tests.Admin_Login_Tests@50d0686</td></tr>
+</table><p>
+</body>
+</html>

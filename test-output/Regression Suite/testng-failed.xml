@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="common.Listeners"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test name="eCollabDDS Tests(failed)">
+    <classes>
+      <class name="tests.Admin_Hospitals_Pages_Tests">
+        <methods>
+          <include name="List_Hospitals_Search_Tests"/>
+          <include name="AddReviewerHos_Tests" invocation-numbers="0"/>
+          <include name="Hospitals_AddEndUserHos_NoData_Tests"/>
+          <include name="List_Hospitals_ColumnSorting_Tests"/>
+          <include name="Hospitals_AddReviewerHos_NoData_Tests"/>
+          <include name="AddEndUserHos_Neg_Tests" invocation-numbers="0 1"/>
+          <include name="hospitals_vcard_count_Tests"/>
+          <include name="AddReviewerHos_Neg_Tests" invocation-numbers="0 1"/>
+          <include name="List_Hospitals_Buttons_Tests"/>
+          <include name="List_Hospitals_EnduserHosData_Update_Tests"/>
+          <include name="List_Hospitals_ReviewerHosData_Update_Tests"/>
+        </methods>
+      </class> <!-- tests.Admin_Hospitals_Pages_Tests -->
+      <class name="tests.TestBase">
+        <methods>
+          <include name="eCollabDDS_Url_should_open"/>
+        </methods>
+      </class> <!-- tests.TestBase -->
+    </classes>
+  </test> <!-- eCollabDDS Tests(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->
