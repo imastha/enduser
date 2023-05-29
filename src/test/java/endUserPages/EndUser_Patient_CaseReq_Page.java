@@ -1,14 +1,14 @@
 package endUserPages;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,29 +26,26 @@ public class EndUser_Patient_CaseReq_Page {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//*[@id='cardbgpatient']")
+	@FindBy(xpath = "//div[@id='cardbgpatient']")
 	private WebElement patientVcard;
-	
+
 	@FindBy(xpath = "//*[@id='cardbghistory']")
 	private WebElement caseReqVcard;
-	
-	@FindBy(xpath = "//*[@id='patient']")
+
+	@FindBy(xpath = "//label[@id='patient']")
 	private WebElement ListButton;
-	
+
 	@FindBy(xpath = "//*[@id='col_hos']")
 	private WebElement accountIcon;
-	
+
 	@FindBy(xpath = "/html/body/div[1]/div/div[1]/div/a[3]")
 	private WebElement logout;
 
-	
+
 	// Add form
 
-	@FindBy(xpath = "//*[@id='cardadmin']/div[5]/div/label[2]")
+	@FindBy(xpath = "//label[@id='pIDAdd']")
 	private WebElement AddButton;
-	
-	@FindBy(xpath = "//*[@id='health_2']")
-	private WebElement dontHaveId;
 
 	@FindBy(xpath = "//*[@id='divnewpatienttitle']/span")
 	private WebElement FormTitle;
@@ -110,83 +107,88 @@ public class EndUser_Patient_CaseReq_Page {
 	@FindBy(xpath = "//*[@id='patientdobErrs']")
 	private WebElement DOB_err;
 
-	@FindBy(xpath = "//*[@id='patient-save']")
+	@FindBy(xpath = "//button[@id='patient-save']")
 	private WebElement Save_button;
-	
+
 	@FindBy(xpath = "//*[@id='patientsavemsg']")
 	private WebElement success_msg;
-	
+
 	@FindBy(xpath = "//*[@id='TDreferencePatientId']")
 	private WebElement patientId;
-	
+
 	//case request
 	@FindBy(xpath = "//*[@id='referencePatientId']")
 	private WebElement pIdSearchBox;
-	
+
 	@FindBy(xpath = "//*[@id='patient-search-byid']")
 	private WebElement searchButton;
-	
+
 	@FindBy(xpath = "//*[@id='domainId']")
 	private WebElement domainDdown;
-	
+
 	@FindBy(xpath = "//*[@id='modalityId']")
 	private WebElement modalityDdown;
-	
+
 	@FindBy(xpath = "//*[@id='clinical']")
 	private WebElement complaintTextbox;
-	
+
 	@FindBy(xpath = "//*[@id='openimage']")
 	private WebElement imageButton;
-	
+
 	@FindBy(xpath = "//*[@id='imagefile']")
 	private WebElement chooseimage;
-	
+
 	@FindBy(xpath = "//*[@id='uploadImage']")
 	private WebElement imageuploadButton;
-	
+
 	@FindBy(xpath = "//*[@id='opendicom']")
 	private WebElement dicomButton;
-	
+
 	@FindBy(xpath = "//*[@id='dicomfile']")
 	private WebElement choosedicom;
-	
+
 	@FindBy(xpath = "//*[@id='uploadDicom']")
 	private WebElement dicomuploadButton;
-	
+
 	@FindBy(xpath = "//*[@id='patientConsent']")
 	private WebElement checkbox;
-	
+
 	@FindBy(xpath = "//*[@id='caserequest-save']")
 	private WebElement saveButton;
-	
-	@FindBy(xpath = "//*[@id='caserequestsavemsg']")
+
+	@FindBy(xpath = "//button[@id='caserequest-save']")
 	private WebElement caseSuccessMsg;
-	
+
 	@FindBy(xpath = "//*[@id='TDDcaseId']")
 	private WebElement caseID;
-	
-	
-	
 
-	public void Open_Patients_Test(SoftAssert Assert) {
+
+
+
+	public void Open_Patients_Test(SoftAssert Assert) throws InterruptedException {
+		Thread.sleep(5000);
 		Assert.assertTrue(patientVcard.isDisplayed(), "Patient vCard not displayed. ");
 		Assert.assertTrue(patientVcard.isEnabled(), "Patient vCard not enabled. ");
 		if (patientVcard.isDisplayed() && patientVcard.isEnabled()) {
+			WebElement patientVcard = driver.findElement(By.xpath("//div[@id='cardbgpatient']"));
+			Thread.sleep(5000);
+			
 			patientVcard.click();
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 			Assert.assertEquals(patientVcard.getAttribute("class"), "card-body bg-success border border-danger",
 					"Failed: Open_Patients_Test, patientVcard not highlighted when clicked ,");
 		}
 	}
+	
 
-	public void Patient_Registration_NoData_Test(SoftAssert Assert) {
+	public void Patient_Registration_NoData_Test(SoftAssert Assert) throws InterruptedException {
 		Assert.assertTrue(AddButton.isDisplayed(), "Add Button not displayed. ");
 		Assert.assertTrue(AddButton.isEnabled(), "Add Button not enabled. ");
 		if (AddButton.isDisplayed() && AddButton.isEnabled()) {
+			Thread.sleep(3000);
 			AddButton.click();
 			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-			dontHaveId.click();
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		
 			Assert.assertEquals(AddButton.getAttribute("class"), "btn nicbgcolor patientcase focus active",
 					"Failed: AddButton not highlighted when clicked ,");
 			Assert.assertEquals(FormTitle.getText(),"Add new Patient", "Failed: Add patient page title test, ");
@@ -224,17 +226,20 @@ public class EndUser_Patient_CaseReq_Page {
 
 	}
 
-	public void Patient_Registration_InvalidData_Test(SoftAssert Assert) {
+	public void Patient_Registration_InvalidData_Test(SoftAssert Assert) throws InterruptedException {
 		// TODO Auto-generated method stub
 		if (AddButton.isDisplayed() && AddButton.isEnabled())
+			Thread.sleep(2000);
 			AddButton.click();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		dontHaveId.click();
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		Thread.sleep(3000);
 		PatientName_textbox.sendKeys("aa");
+		Thread.sleep(3000);
 		radio1.click();
 		Mobile_textbox.sendKeys("00");
+		Thread.sleep(3000);
 		DOB_textbox.sendKeys("111111");
+		Thread.sleep(3000);
 		if(Save_button.isDisplayed() && Save_button.isEnabled())
 			Save_button.click();
 		WebDriverWait wait = new WebDriverWait(driver, 3);
@@ -243,20 +248,25 @@ public class EndUser_Patient_CaseReq_Page {
 		Assert.assertEquals(PatientName_err.getText(), "Allows characters, dot and space and length 3 - 70","Failed: PatientName_err test, ");
 		Assert.assertEquals(Mobile_err.getText(), "Please enter valid 10 digit mobile","Failed: Mobile_err test, ");
 		Assert.assertEquals(DOB_err.getText(), "Invalid Data","Failed: DOB_err test, ");
-		
+
 	}
 
-	public String Patient_Registration_ValidData_Test(String patientName, String mobile, String dob, SoftAssert Assert) {
+	public String Patient_Registration_ValidData_Test(String patientName, String mobile, String dob, SoftAssert Assert) throws InterruptedException {
 		// TODO Auto-generated method stub
 		if (AddButton.isDisplayed() && AddButton.isEnabled())
+			Thread.sleep(3000);
 			AddButton.click();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		dontHaveId.click();
+		Thread.sleep(3000);
 		PatientName_textbox.sendKeys(patientName);
 		//PatientName_textbox.sendKeys("Naam");
+		Thread.sleep(2000);
 		radio1.click();
+		Thread.sleep(2000);
 		Mobile_textbox.sendKeys(mobile);
+		Thread.sleep(2000);
 		DOB_textbox.sendKeys(dob);
+		Thread.sleep(2000);
 		if(Save_button.isDisplayed() && Save_button.isEnabled())
 			Save_button.click();
 		WebDriverWait wait = new WebDriverWait(driver, 3);
@@ -264,38 +274,55 @@ public class EndUser_Patient_CaseReq_Page {
 				"New Patient saved successfully."));
 		Assert.assertEquals(success_msg.getText(), "New Patient saved successfully.","Failed: success_msg test, ");
 		//System.out.println(patientId.getText());
-		patient_Id= patientId.getText();	
+		patient_Id= patientId.getText();
+		Thread.sleep(2000);
 		return patient_Id;
 	}
 
 	public void Add_CaseReq_Page(SoftAssert Assert, String pid) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
+		Thread.sleep(2000);
 		ListButton.click();
+		Thread.sleep(2000);
 		System.out.println(pid);
 		caseReqVcard.click();
+		Thread.sleep(2000);
 		pIdSearchBox.sendKeys(pid);
+		Thread.sleep(2000);
 		searchButton.click();
+		Thread.sleep(2000);
 		Select s= new Select(domainDdown);
 		s.selectByVisibleText("Chest");
 		Select s1= new Select(modalityDdown);
 		s1.selectByVisibleText("Digital X-Ray");
+		Thread.sleep(2000);
 		complaintTextbox.sendKeys("My Comment Chest");
+		
+		JavascriptExecutor js111 = (JavascriptExecutor) driver;
+		js111.executeScript("window.scrollBy(100,500)");
+		Thread.sleep(2000);
 		dicomButton.click();
-		choosedicom.sendKeys("C:\\Users\\ravik\\Downloads\\0002.DCM");
+		Thread.sleep(2000);
+		choosedicom.sendKeys("C:\\Users\\NICSI\\Desktop\\512KB_dicoms\\512KB_dicoms");
+		Thread.sleep(2000);
 		dicomuploadButton.click();
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		/*wait.until(ExpectedConditions.visibilityOf(imageButton));*/
-		//driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
-		Thread.sleep(6000);
-		imageButton.click();
-		chooseimage.sendKeys("C:\\Users\\ravik\\Downloads\\chest.jpeg");
-		imageuploadButton.click();
+	//driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+	Thread.sleep(3000);
+
+//	    imageButton.click();
+//		Thread.sleep(2000);
+//		chooseimage.sendKeys("C:\Users\NICSI\Desktop\abnormal");
+//		Thread.sleep(3000);
+//		imageuploadButton.click();
 		/*WebDriverWait wait1 = new WebDriverWait(driver, 10);
 		wait1.until(ExpectedConditions.visibilityOf(checkbox));*/
 		//driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 		checkbox.click();
-		saveButton.click();	
+		Thread.sleep(3000);
+		saveButton.click();
 		wait.until(ExpectedConditions.textToBePresentInElement(caseSuccessMsg, "The Case Details are Successfully Submitted."));
 		Assert.assertEquals(caseSuccessMsg.getText(), "The Case Details are Successfully Submitted.", "Failed: Add_CaseReq_SuccessMsg. ,");
 		String caseId = caseID.getText();
@@ -304,8 +331,11 @@ public class EndUser_Patient_CaseReq_Page {
 				System.getProperty("user.dir") + "\\src\\test\\resources\\endUserProperties\\caseDetails.properties");
 		properties.setProperty("caseId", caseId);
 		properties.store(outputstream, null);
+		Thread.sleep(3000);
 		accountIcon.click();
+		Thread.sleep(3000);
 		logout.click();
 	}
 
+	
 }

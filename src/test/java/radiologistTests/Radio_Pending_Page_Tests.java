@@ -10,20 +10,19 @@ import radiologistPages.Radio_Pending_Page;
 
 public class Radio_Pending_Page_Tests extends TestBase{
 
-	@Test(priority = 1)
-	public void radio_Pending_Default_Tests(){
+	@Test(priority = 0)
+	public void  open_Pending_Vcard(){
 		SoftAssert Assert= new SoftAssert();
 		Radio_Pending_Page radiop=new Radio_Pending_Page(driver);
 		radiop.open_Pending_Vcard(Assert);
-		radiop.hideColumn_validation(Assert);
 		Assert.assertAll();
 	}
 	
-	@Test(priority = 2)
-	public void radio_pendingCase_Test() throws IOException, InterruptedException{
+	@Test(priority = 1)
+	public void All_btn_validation() throws IOException, InterruptedException{
 		SoftAssert Assert=new SoftAssert();
 		Radio_Pending_Page radiop=new Radio_Pending_Page(driver);
-		radiop.search_Open_Pending_Case(Assert);
+		radiop.All_btn_validation(Assert);
 		Assert.assertAll();
 	}
 }
