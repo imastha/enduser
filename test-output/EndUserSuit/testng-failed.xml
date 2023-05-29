@@ -8,11 +8,48 @@
   </listeners>
   <test thread-count="5" name="endUser Tests(failed)">
     <classes>
+      <class name="endUserTests.EndUser_Rejected_Tests">
+        <methods>
+          <include name="Rejected_Viewbtn"/>
+          <include name="EndUser_Url_should_open"/>
+        </methods>
+      </class> <!-- endUserTests.EndUser_Rejected_Tests -->
+      <class name="endUserTests.EndUser_Relogin_Tests">
+        <methods>
+          <include name="login_EndUser_Test"/>
+          <include name="EndUser_Url_should_open"/>
+        </methods>
+      </class> <!-- endUserTests.EndUser_Relogin_Tests -->
+      <class name="endUserTests.EndUser_Default_Page_Tests">
+        <methods>
+          <include name="EndUser_myProfile_button_Test"/>
+          <include name="EndUser_Url_should_open"/>
+        </methods>
+      </class> <!-- endUserTests.EndUser_Default_Page_Tests -->
+      <class name="endUserTests.EndUser_Completed_Tests">
+        <methods>
+          <include name="open_Completed_vcards"/>
+          <include name="EndUser_Url_should_open"/>
+        </methods>
+      </class> <!-- endUserTests.EndUser_Completed_Tests -->
       <class name="endUserTests.EndUser_Pending_Tests">
         <methods>
+          <include name="Pending_Yesterdaybtn"/>
+          <include name="Pending_Actionbtn"/>
+          <include name="Pending_Todaybtn"/>
+          <include name="Pending_Viewbtn"/>
           <include name="open_Pending_vcard"/>
+          <include name="Pending_Detailsbtn"/>
+          <include name="EndUser_Url_should_open"/>
         </methods>
       </class> <!-- endUserTests.EndUser_Pending_Tests -->
+      <class name="endUserTests.EndUser_Patient_CaseReq_Tests">
+        <methods>
+          <include name="Add_Patient_Neg_Tests"/>
+          <include name="Add_CaseReq_Tests"/>
+          <include name="EndUser_Url_should_open"/>
+        </methods>
+      </class> <!-- endUserTests.EndUser_Patient_CaseReq_Tests -->
     </classes>
   </test> <!-- endUser Tests(failed) -->
 </suite> <!-- Failed suite [EndUserSuit] -->

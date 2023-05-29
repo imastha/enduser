@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+	<listeners>
+		<listener class-name="common.Listeners" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	</listeners>
+	<parameter name="browser" value="chrome" />
+	<test name="eCollabDDS Tests">
+		<classes>
+			<class name="radiologistTests.Radio_Login_Tests" />	
+		<!--	<class name="radiologistTests.Radio_Default_Page_Tests"/>
+			<class name="radiologistTests.Radio_Pending_Page_Tests"/>
+		<class name="radiologistTests.Radio_Completed_Page_Tests"/> -->
+		<class name="radiologistTests.Radio_Rejected_Pages_Tests"/> 
+		
+		
+		</classes>
+
+	</test> <!-- eCollabDDS Tests -->
+</suite> <!-- Regression Suite -->

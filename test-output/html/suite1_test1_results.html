@@ -29,7 +29,7 @@
 	    		<span class="tooltiptextCustom">Copy Test name</span>
 			</div>
 	    </th>
-	    <th id="testNameId">endUser Tests</th> 
+	    <th id="testNameId">eCollabDDS Tests</th> 
 	  </tr>
 	  <tr>
 	    <th>Test Class : </th>
@@ -43,8 +43,8 @@
 	    		<span class="tooltiptextCustom">Copy Class name</span>
 			</div>
 	    </th> 
-	    <th id="testClassId">endUserTests.TestBase<br>endUserTests.EndUser_Login_Tests<br>endUserTests.EndUser_Pending_Tests<br></th>
-	    <th id="testClassNameId" hidden="true">TestBase<br>EndUser_Login_Tests<br>EndUser_Pending_Tests<br></th>
+	    <th id="testClassId">radiologistTests.Radio_Login_Tests<br>radiologistTests.Radio_Rejected_Pages_Tests<br></th>
+	    <th id="testClassNameId" hidden="true">Radio_Login_Tests<br>Radio_Rejected_Pages_Tests<br></th>
 	  </tr>
 	  <tr>
 	    <th>Suite Name : </th>
@@ -54,7 +54,7 @@
 	    		<span class="tooltiptextCustom">Copy Suite name</span>
 			</div>
 		</th>
-	    <th id="suiteNameId">EndUserSuit</th>
+	    <th id="suiteNameId">Regression Suite</th>
 	  </tr>
 	  <tr>
 	    <th>Suite XML : </th>
@@ -68,23 +68,23 @@
 	    		<span class="tooltiptextCustom">Copy Suite file name</span>
 			</div>
 	    </th> 
-	  	<th id="suiteXMLId">C:\Users\NICSI\Downloads\eCollabDDS\eCollabDDS\eCollabDDS\EndUserTestNg.xml</th>
-	  	<th id="suiteXMLNameId" hidden="true">EndUserTestNg.xml</th>
+	  	<th id="suiteXMLId">C:\Users\NICSI\Downloads\eCollabDDS\eCollabDDS\eCollabDDS\RadioLogistTestng.xml</th>
+	  	<th id="suiteXMLNameId" hidden="true">RadioLogistTestng.xml</th>
 	  </tr>
 	  	  <tr>
 	    <th>Total Time : </th>
 	    <th></th>
-	    <th>00:00:18</th> 
+	    <th>00:00:22</th> 
 	  </tr>
 	  <tr>
 	    <th>Total Steps : </th>
 	   	<th></th>
-	    <th>2</th> 
+	    <th>4</th> 
 	  </tr>
 	  <tr>
 	    <th>Status : </th>
 	    <th></th>
-	    <th><font color="red">FAIL</font></th> 
+	    <th><font color="green">PASS</font></th> 
 	  </tr>
 	</table>
 </div>
@@ -109,83 +109,92 @@
 				
 				
 												
-											<tr>
-	<td class="time">1680520706065</td>
-	<td class="header failed" colspan="4" onClick="toggleElement('4c16f78a-36db-4a05-b14d-2a82d277abc9','block');changeSingleIcon('span-4c16f78a-36db-4a05-b14d-2a82d277abc9');" title="Click to expand/collapse" style="cursor: pointer;">
-	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>endUserTests.EndUser_Pending_Tests</div>
-	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-4c16f78a-36db-4a05-b14d-2a82d277abc9' class="glyphicon glyphicon-menu-down"></span></div>
-	</td>
-	</tr>
-<tr>
-	<td class="time">1680520706065</td>
-	<td class="methodTest">
-		<span class="description"><b>Method: </b>open_Pending_vcard</span><br>
-			<span class="description"><b>Description: </b></span><br>
-							<span class="duration"><b>Duration: </b>3.008s</span><br>
-	</td>
-	<td class="result">
-						<div class="noCollapse" id="4c16f78a-36db-4a05-b14d-2a82d277abc9" style="display: block;">
-												Test started: open_Pending_vcard<br>
-												Failed: open_Pending_vcard<br>
-									<a href="javascript:toggleElement('exception-4c16f78a-36db-4a05-b14d-2a82d277abc9','block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null</b></a><br/>
-		<div class="stackTrace" id="exception-4c16f78a-36db-4a05-b14d-2a82d277abc9">
-					org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)<br/>
-					org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)<br/>
-					jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)<br/>
-					endUserPages.EndUser_Pending_Page.open_Pending_vcard(EndUser_Pending_Page.java:62)<br/>
-					endUserTests.EndUser_Pending_Tests.open_Pending_vcard(EndUser_Pending_Tests.java:20)<br/>
-					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
-					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br/>
-					java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>
-					java.base/java.lang.reflect.Method.invoke(Method.java:568)<br/>
-					org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br/>
-					org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)<br/>
-					org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br/>
-					org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>
-					org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)<br/>
-					org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br/>
-					org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>
-					org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
-					java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br/>
-					org.testng.TestRunner.privateRun(TestRunner.java:794)<br/>
-					org.testng.TestRunner.run(TestRunner.java:596)<br/>
-					org.testng.SuiteRunner.runTest(SuiteRunner.java:377)<br/>
-					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)<br/>
-					org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)<br/>
-					org.testng.SuiteRunner.run(SuiteRunner.java:276)<br/>
-					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br/>
-					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br/>
-					org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)<br/>
-					org.testng.TestNG.runSuitesLocally(TestNG.java:1134)<br/>
-					org.testng.TestNG.runSuites(TestNG.java:1063)<br/>
-					org.testng.TestNG.run(TestNG.java:1031)<br/>
-					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
-					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
-					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
-						</div>
-		</td>
-	</div>
-</tr>
-						
+				
 				
 												<tr>
-			<td class="time">1680520690794</td>
-			<td class="header passed" colspan="4" onClick="toggleElement('3c03cb61-a0a7-4412-9c54-2f62e1112dff','block');changeSingleIcon('span-3c03cb61-a0a7-4412-9c54-2f62e1112dff');" title="Click to expand/collapse" style="cursor: pointer;">
-			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>endUserTests.EndUser_Login_Tests</div>
-			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-3c03cb61-a0a7-4412-9c54-2f62e1112dff' class="glyphicon glyphicon-menu-down"></span></div>
+			<td class="time">1685361645995</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('70eb78e7-f95e-427f-b52f-e3044e0a592f','block');changeSingleIcon('span-70eb78e7-f95e-427f-b52f-e3044e0a592f');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>radiologistTests.Radio_Login_Tests</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-70eb78e7-f95e-427f-b52f-e3044e0a592f' class="glyphicon glyphicon-menu-down"></span></div>
 			</td>
 			</tr>
 			<tr>
-	<td class="time">1680520690794</td>
+	<td class="time">1685361645995</td>
 	<td class="methodTest">
-		<span class="description"><b>Method: </b>EndUser_Login_Page_Test</span><br>
+		<span class="description"><b>Method: </b>login_Radio_Test</span><br>
 			<span class="description"><b>Description: </b></span><br>
-							<span class="duration"><b>Duration: </b>15.267s</span><br>
+							<span class="duration"><b>Duration: </b>22.377s</span><br>
 	</td>
 	<td class="result">
-						<div class="stackTrace" id="3c03cb61-a0a7-4412-9c54-2f62e1112dff" style="display: block;">
-												Test started: EndUser_Login_Page_Test<br>
-												Passed: EndUser_Login_Page_Test<br>
+						<div class="stackTrace" id="70eb78e7-f95e-427f-b52f-e3044e0a592f" style="display: block;">
+												Test started: login_Radio_Test<br>
+												Passed: login_Radio_Test<br>
+								</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1685361668376</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('6b516989-9114-4dfc-b5a7-70a077f8e439','block');changeSingleIcon('span-6b516989-9114-4dfc-b5a7-70a077f8e439');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>radiologistTests.Radio_Rejected_Pages_Tests</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-6b516989-9114-4dfc-b5a7-70a077f8e439' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1685361668376</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>radio_myProfile_button_Test</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>0.137s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="6b516989-9114-4dfc-b5a7-70a077f8e439" style="display: block;">
+												Test started: radio_myProfile_button_Test<br>
+												Passed: radio_myProfile_button_Test<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1685361668622</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('aff6af5b-f98d-4c27-9c5f-3c5f5145db8e','block');changeSingleIcon('span-aff6af5b-f98d-4c27-9c5f-3c5f5145db8e');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>radiologistTests.Radio_Rejected_Pages_Tests</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-aff6af5b-f98d-4c27-9c5f-3c5f5145db8e' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1685361668622</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>radio_vCards_Counts_Test</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+						<span class="duration"><b>Duration: </b>0.082s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="aff6af5b-f98d-4c27-9c5f-3c5f5145db8e" style="display: block;">
+												Test started: radio_vCards_Counts_Test<br>
+												Passed: radio_vCards_Counts_Test<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1685361668515</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('a3767063-0cf3-44cf-bbc6-0543b3001b3c','block');changeSingleIcon('span-a3767063-0cf3-44cf-bbc6-0543b3001b3c');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>radiologistTests.Radio_Rejected_Pages_Tests</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-a3767063-0cf3-44cf-bbc6-0543b3001b3c' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1685361668515</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>radio_vCards_Test</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>0.105s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="a3767063-0cf3-44cf-bbc6-0543b3001b3c" style="display: block;">
+												Test started: radio_vCards_Test<br>
+												Passed: radio_vCards_Test<br>
 								</td>
 	</div>
 </tr>

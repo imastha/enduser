@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [EndUserSuit]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Regression Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="common.Listeners"/>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="endUser Tests(failed)">
+  <test thread-count="5" name="eCollabDDS Tests(failed)">
     <classes>
-      <class name="endUserTests.EndUser_Pending_Tests">
+      <class name="radiologistTests.Radio_Completed_Page_Tests">
         <methods>
-          <include name="open_Pending_vcard"/>
+          <include name="all_btn_validation"/>
+          <include name="EndUser_Url_should_open"/>
         </methods>
-      </class> <!-- endUserTests.EndUser_Pending_Tests -->
+      </class> <!-- radiologistTests.Radio_Completed_Page_Tests -->
     </classes>
-  </test> <!-- endUser Tests(failed) -->
-</suite> <!-- Failed suite [EndUserSuit] -->
+  </test> <!-- eCollabDDS Tests(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->

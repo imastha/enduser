@@ -1,91 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="1" failed="1" skipped="0">
+<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Test started: EndUser_Login_Page_Test]]>
+      <![CDATA[Test started: login_Radio_Test]]>
     </line>
     <line>
-      <![CDATA[Passed: EndUser_Login_Page_Test]]>
+      <![CDATA[Passed: login_Radio_Test]]>
     </line>
     <line>
-      <![CDATA[Test started: open_Pending_vcard]]>
+      <![CDATA[Test started: radio_myProfile_button_Test]]>
     </line>
     <line>
-      <![CDATA[Failed: open_Pending_vcard]]>
+      <![CDATA[Passed: radio_myProfile_button_Test]]>
+    </line>
+    <line>
+      <![CDATA[Test started: radio_vCards_Test]]>
+    </line>
+    <line>
+      <![CDATA[Passed: radio_vCards_Test]]>
+    </line>
+    <line>
+      <![CDATA[Test started: radio_vCards_Counts_Test]]>
+    </line>
+    <line>
+      <![CDATA[Passed: radio_vCards_Counts_Test]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-04-03T16:48:10 IST" name="EndUserSuit" finished-at="2023-04-03T16:48:29 IST" duration-ms="18336">
+  <suite started-at="2023-05-29T17:30:45 IST" name="Regression Suite" finished-at="2023-05-29T17:31:08 IST" duration-ms="22763">
     <groups>
     </groups>
-    <test started-at="2023-04-03T16:48:10 IST" name="endUser Tests" finished-at="2023-04-03T16:48:29 IST" duration-ms="18336">
-      <class name="endUserTests.EndUser_Login_Tests">
-        <test-method signature="EndUser_Login_Page_Test()[pri:0, instance:endUserTests.EndUser_Login_Tests@13d73f29]" started-at="2023-04-03T16:48:10 IST" name="EndUser_Login_Page_Test" finished-at="2023-04-03T16:48:26 IST" duration-ms="15267" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Test started: EndUser_Login_Page_Test]]>
-            </line>
-            <line>
-              <![CDATA[Passed: EndUser_Login_Page_Test]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- EndUser_Login_Page_Test -->
-      </class> <!-- endUserTests.EndUser_Login_Tests -->
-      <class name="endUserTests.EndUser_Pending_Tests">
-        <test-method signature="open_Pending_vcard()[pri:0, instance:endUserTests.EndUser_Pending_Tests@565f390]" started-at="2023-04-03T16:48:26 IST" name="open_Pending_vcard" finished-at="2023-04-03T16:48:29 IST" duration-ms="3008" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-at endUserPages.EndUser_Pending_Page.open_Pending_vcard(EndUser_Pending_Page.java:62)
-at endUserTests.EndUser_Pending_Tests.open_Pending_vcard(EndUser_Pending_Tests.java:20)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-            <line>
-              <![CDATA[Test started: open_Pending_vcard]]>
-            </line>
-            <line>
-              <![CDATA[Failed: open_Pending_vcard]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- open_Pending_vcard -->
-      </class> <!-- endUserTests.EndUser_Pending_Tests -->
-      <class name="endUserTests.TestBase">
-        <test-method is-config="true" signature="EndUser_Url_should_open(java.lang.String)[pri:0, instance:endUserTests.TestBase@465232e9]" started-at="2023-04-03T16:48:01 IST" name="EndUser_Url_should_open" finished-at="2023-04-03T16:48:10 IST" duration-ms="9108" status="PASS">
+    <test started-at="2023-05-29T17:30:45 IST" name="eCollabDDS Tests" finished-at="2023-05-29T17:31:08 IST" duration-ms="22763">
+      <class name="radiologistTests.Radio_Login_Tests">
+        <test-method is-config="true" signature="EndUser_Url_should_open(java.lang.String)[pri:0, instance:radiologistTests.Radio_Login_Tests@6e2aa843]" started-at="2023-05-29T17:30:34 IST" name="EndUser_Url_should_open" finished-at="2023-05-29T17:30:45 IST" duration-ms="11641" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -96,7 +42,49 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndUser_Url_should_open -->
-      </class> <!-- endUserTests.TestBase -->
-    </test> <!-- endUser Tests -->
-  </suite> <!-- EndUserSuit -->
+        <test-method signature="login_Radio_Test()[pri:0, instance:radiologistTests.Radio_Login_Tests@6e2aa843]" started-at="2023-05-29T17:30:45 IST" name="login_Radio_Test" finished-at="2023-05-29T17:31:08 IST" duration-ms="22377" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test started: login_Radio_Test]]>
+            </line>
+            <line>
+              <![CDATA[Passed: login_Radio_Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login_Radio_Test -->
+      </class> <!-- radiologistTests.Radio_Login_Tests -->
+      <class name="radiologistTests.Radio_Rejected_Pages_Tests">
+        <test-method signature="radio_myProfile_button_Test()[pri:1, instance:radiologistTests.Radio_Rejected_Pages_Tests@7dc3712]" started-at="2023-05-29T17:31:08 IST" name="radio_myProfile_button_Test" finished-at="2023-05-29T17:31:08 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test started: radio_myProfile_button_Test]]>
+            </line>
+            <line>
+              <![CDATA[Passed: radio_myProfile_button_Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- radio_myProfile_button_Test -->
+        <test-method signature="radio_vCards_Test()[pri:2, instance:radiologistTests.Radio_Rejected_Pages_Tests@7dc3712]" started-at="2023-05-29T17:31:08 IST" name="radio_vCards_Test" finished-at="2023-05-29T17:31:08 IST" duration-ms="105" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test started: radio_vCards_Test]]>
+            </line>
+            <line>
+              <![CDATA[Passed: radio_vCards_Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- radio_vCards_Test -->
+        <test-method signature="radio_vCards_Counts_Test()[pri:3, instance:radiologistTests.Radio_Rejected_Pages_Tests@7dc3712]" started-at="2023-05-29T17:31:08 IST" name="radio_vCards_Counts_Test" finished-at="2023-05-29T17:31:08 IST" duration-ms="82" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test started: radio_vCards_Counts_Test]]>
+            </line>
+            <line>
+              <![CDATA[Passed: radio_vCards_Counts_Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- radio_vCards_Counts_Test -->
+      </class> <!-- radiologistTests.Radio_Rejected_Pages_Tests -->
+    </test> <!-- eCollabDDS Tests -->
+  </suite> <!-- Regression Suite -->
 </testng-results>

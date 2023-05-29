@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="EndUserSuit">
-  <listeners>
+	<listeners>
 		<listener class-name="common.Listeners" />
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 	</listeners>
 	<parameter name="browser" value="chrome" />
 	<test name="endUser Tests">
 		<classes>
-			  <class name="endUserTests.TestBase" />
-		<class name="endUserTests.EndUser_Login_Tests" />
-		 <class name="endUserTests.EndUser_Pending_Tests" />
-	 <!--  <class name="endUserTests.EndUser_Default_Page_Tests" />-->
-	   
-	     <!-- <class name="endUserTests.EndUser_Completed_Tests"/>t
-		  <class name="endUserTests.EndUser_Patient_CaseReq_Tests" />
-			<class name="radiologistTests.Radio_Login_Tests" />
+			<class name="endUserTests.TestBase" />
+			<class name="endUserTests.EndUser_Login_Tests" />
+			<class name="endUserTests.EndUser_Pending_Tests" />
+			<class name="endUserTests.EndUser_Completed_Tests" />
+			<class name="endUserTests.EndUser_Rejected_Tests" />
+			<class name="endUserTests.EndUser_Patient_CaseReq_Tests" />
 			<class name="endUserTests.EndUser_Relogin_Tests"/>
-			<class name="radiologistTests.Radio_Default_Page_Tests"/>
-			<class name="radiologistTests.Radio_Pending_Page_Tests"/>
-			<class name="radiologistTests.Radio_Completed_Page_Tests"/>
-			-->
+			  <class name="endUserTests.EndUser_Default_Page_Tests" />	   
+			  
+			  
+			
+
 		</classes>
 	</test> <!-- endUser Tests -->
 </suite> <!-- EndUserSuit -->
